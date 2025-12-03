@@ -351,8 +351,10 @@ if(isset($_SESSION['keranjang'])) {
             <?php endif; ?>
         </div>
 
-        <a href="#" class="nav-link"><i class="fas fa-wallet"></i><span>Saldo</span></a>
-        <a href="profile_user.php" class="nav-link"><i class="fas fa-user"></i><span>Profil</span></a>
+        <!-- MENU CHAT (MENGGANTIKAN SALDO) -->
+        <a href="chat.php" class="nav-link"><i class="fas fa-comments"></i><span>Chat</span></a>
+        
+        <a href="../profile/profile.php" class="nav-link"><i class="fas fa-user"></i><span>Profil</span></a>
     </nav>
 
     <?php if (isset($_SESSION['notif'])): ?>
