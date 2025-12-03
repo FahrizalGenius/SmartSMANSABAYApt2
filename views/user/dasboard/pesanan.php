@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// --- DATA DUMMY (Tanpa Lokasi) ---
+// --- DATA DUMMY---
 $riwayat_pesanan = [
     [
         'id_order' => '#ORD-001',
@@ -232,7 +232,7 @@ function getStatusColor($status) {
             <a href="keranjang_belanja.php" class="nav-fab"><i class="fas fa-shopping-basket"></i></a>
         </div>
         <a href="#" class="nav-link"><i class="fas fa-wallet"></i><span>Saldo</span></a>
-        <a href="profile_user.php" class="nav-link"><i class="fas fa-user"></i><span>Profil</span></a>
+        <a href="../profile/profile.php" class="nav-link"><i class="fas fa-user"></i><span>Profil</span></a>
     </nav>
 
 </body>
