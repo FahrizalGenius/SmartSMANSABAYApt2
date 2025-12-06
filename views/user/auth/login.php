@@ -1,3 +1,6 @@
+<?php
+// filepath: /opt/lampp/htdocs/SmartSMANSABAYApt2/views/user/auth/login.php
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -72,20 +75,35 @@
             }
         }
     </style>    
-
 </head>
 
 <body class="bg-white">
-    <?php include_once '../components/colaborator.php'; ?>
-    
     <div class="responsive-container">
         <div class="w-full max-w-sm sm:max-w-md">
-            <?php include_once '../components/animation-area.php'; ?>
+            <?php 
+            // Include animation area
+            if (file_exists('../components/animation-area.php')) {
+                include_once '../components/animation-area.php'; 
+            } else {
+                // Fallback animation
+                echo '<div class="text-center mb-8">
+                        <div class="animate-bounce text-6xl">🔐</div>
+                        <h1 class="text-2xl font-bold text-gray-800 mt-4">Login</h1>
+                        <p class="text-gray-600 text-sm mt-2">Smart SMANSABAYA</p>
+                      </div>';
+            }
+            ?>
 
             <!-- Login Form -->
-            <form action="login_process.php" method="POST" class="space-y-4 mt-8">
-                <!-- CSRF Protection (you'll need to implement this) -->
-                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token'] ?? ''; ?>">
+            <form action="../../../process/user/auth/login.php" method="POST" class="space-y-4 mt-8">
+                <!-- CSRF Protection -->
+                <?php 
+                session_start();
+                if (!isset($_SESSION['csrf_token'])) {
+                    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+                }
+                ?>
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 
                 <!-- Email Input -->
                 <div>
@@ -94,8 +112,12 @@
                         name="email" 
                         placeholder="Email" 
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
+                        value="<?php echo isset($_SESSION['old_email']) ? htmlspecialchars($_SESSION['old_email']) : ''; ?>"
                         required
                     >
+                    <?php if (isset($_SESSION['errors']['email'])): ?>
+                        <p class="text-red-500 text-xs mt-1"><?php echo $_SESSION['errors']['email']; ?></p>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Password Input -->
@@ -107,7 +129,24 @@
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
                         required
                     >
+                    <?php if (isset($_SESSION['errors']['password'])): ?>
+                        <p class="text-red-500 text-xs mt-1"><?php echo $_SESSION['errors']['password']; ?></p>
+                    <?php endif; ?>
                 </div>
+
+                <!-- Error Message -->
+                <?php if (isset($_SESSION['error'])): ?>
+                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                        <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+                    </div>
+                <?php endif; ?>
+
+                <!-- Success Message -->
+                <?php if (isset($_SESSION['success'])): ?>
+                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                        <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+                    </div>
+                <?php endif; ?>
 
                 <!-- Forgot Password & Reset Link -->
                 <div class="text-center space-y-1">
@@ -133,8 +172,16 @@
                 </button>
             </form>
 
+            <?php
+            // Clear old input data
+            if (isset($_SESSION['old_email'])) {
+                unset($_SESSION['old_email']);
+            }
+            if (isset($_SESSION['errors'])) {
+                unset($_SESSION['errors']);
+            }
+            ?>
         </div>
     </div> 
 </body>
-
 </html>
