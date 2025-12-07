@@ -1,3 +1,6 @@
+<?php
+// filepath: /opt/lampp/htdocs/SmartSMANSABAYApt2/views/user/auth/register.php
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -76,25 +79,6 @@
 </head>
 
 <body class="bg-white">
-    <?php 
-    // Include colaborator component - PERBAIKI PATH INI
-    if (file_exists('../../../components/colaborator.php')) {
-        include_once '../../../components/colaborator.php'; 
-    } else {
-        // Fallback jika file tidak ditemukan
-        echo '<div class="text-center mt-12">
-                <div class="flex justify-center space-x-6">
-                    <div class="w-12 h-12 rounded-full border-4 border-white shadow-lg flex items-center justify-center bg-white">
-                        <span class="text-purple-500 font-bold">S</span>
-                    </div>
-                    <div class="w-12 h-12 rounded-full border-4 border-white shadow-lg flex items-center justify-center bg-white">
-                        <span class="text-purple-500 font-bold">E</span>
-                    </div>
-                </div>
-              </div>';
-    }
-    ?>
-    
     <div class="responsive-container">
         <div class="w-full max-w-sm sm:max-w-md">
             <?php 
@@ -112,7 +96,7 @@
             ?>
 
             <!-- Register Form -->
-            <form action="register_process.php" method="POST" class="space-y-4 mt-8">
+            <form action="../../../process/user/auth/register.php" method="POST" class="space-y-4 mt-8">
                 <!-- CSRF Protection -->
                 <?php 
                 // Generate CSRF token jika belum ada
@@ -130,7 +114,7 @@
                         name="email" 
                         placeholder="Email" 
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
-                        value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>"
+                        value="<?php echo isset($_SESSION['old_data']['email']) ? htmlspecialchars($_SESSION['old_data']['email']) : ''; ?>"
                         required
                     >
                     <?php if (isset($_SESSION['errors']['email'])): ?>
@@ -145,7 +129,7 @@
                         name="NIS" 
                         placeholder="Nomor Induk Siswa" 
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
-                        value="<?php echo isset($_POST['NIS']) ? htmlspecialchars($_POST['NIS']) : ''; ?>"
+                        value="<?php echo isset($_SESSION['old_data']['NIS']) ? htmlspecialchars($_SESSION['old_data']['NIS']) : ''; ?>"
                         required
                     >
                     <?php if (isset($_SESSION['errors']['NIS'])): ?>
@@ -158,13 +142,42 @@
                     <input 
                         type="tel" 
                         name="no_telp" 
-                        placeholder="Nomor Telepon Aktif" 
+                        placeholder="Nomor Telepon Aktif (08xxxxxxxxxx)" 
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
-                        value="<?php echo isset($_POST['no_telp']) ? htmlspecialchars($_POST['no_telp']) : ''; ?>"
+                        value="<?php echo isset($_SESSION['old_data']['no_telp']) ? htmlspecialchars($_SESSION['old_data']['no_telp']) : ''; ?>"
                         required
                     >
                     <?php if (isset($_SESSION['errors']['no_telp'])): ?>
                         <p class="text-red-500 text-xs mt-1"><?php echo $_SESSION['errors']['no_telp']; ?></p>
+                    <?php endif; ?>
+                </div>
+
+                <!-- Kelas Input -->
+                <div>
+                    <select 
+                        name="kelas" 
+                        class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
+                        required
+                    >
+                        <option value="">Pilih Kelas</option>
+                        <option value="10 IPA 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '10 IPA 1') ? 'selected' : ''; ?>>10 IPA 1</option>
+                        <option value="10 IPA 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '10 IPA 2') ? 'selected' : ''; ?>>10 IPA 2</option>
+                        <option value="10 IPA 3" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '10 IPA 3') ? 'selected' : ''; ?>>10 IPA 3</option>
+                        <option value="10 IPS 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '10 IPS 1') ? 'selected' : ''; ?>>10 IPS 1</option>
+                        <option value="10 IPS 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '10 IPS 2') ? 'selected' : ''; ?>>10 IPS 2</option>
+                        <option value="11 IPA 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '11 IPA 1') ? 'selected' : ''; ?>>11 IPA 1</option>
+                        <option value="11 IPA 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '11 IPA 2') ? 'selected' : ''; ?>>11 IPA 2</option>
+                        <option value="11 IPA 3" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '11 IPA 3') ? 'selected' : ''; ?>>11 IPA 3</option>
+                        <option value="11 IPS 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '11 IPS 1') ? 'selected' : ''; ?>>11 IPS 1</option>
+                        <option value="11 IPS 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '11 IPS 2') ? 'selected' : ''; ?>>11 IPS 2</option>
+                        <option value="12 IPA 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '12 IPA 1') ? 'selected' : ''; ?>>12 IPA 1</option>
+                        <option value="12 IPA 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '12 IPA 2') ? 'selected' : ''; ?>>12 IPA 2</option>
+                        <option value="12 IPA 3" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '12 IPA 3') ? 'selected' : ''; ?>>12 IPA 3</option>
+                        <option value="12 IPS 1" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '12 IPS 1') ? 'selected' : ''; ?>>12 IPS 1</option>
+                        <option value="12 IPS 2" <?php echo (isset($_SESSION['old_data']['kelas']) && $_SESSION['old_data']['kelas'] === '12 IPS 2') ? 'selected' : ''; ?>>12 IPS 2</option>
+                    </select>
+                    <?php if (isset($_SESSION['errors']['kelas'])): ?>
+                        <p class="text-red-500 text-xs mt-1"><?php echo $_SESSION['errors']['kelas']; ?></p>
                     <?php endif; ?>
                 </div>
 
@@ -173,7 +186,7 @@
                     <input 
                         type="password" 
                         name="password" 
-                        placeholder="Password" 
+                        placeholder="Password (min 6 karakter)" 
                         class="w-full px-4 py-3 bg-gray-100 rounded-xl border-0 focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700 text-sm sm:text-base"
                         required
                     >
@@ -238,7 +251,10 @@
     </div> 
 
     <?php
-    // Clear errors after displaying
+    // Clear old data and errors after displaying
+    if (isset($_SESSION['old_data'])) {
+        unset($_SESSION['old_data']);
+    }
     if (isset($_SESSION['errors'])) {
         unset($_SESSION['errors']);
     }
