@@ -1,0 +1,84 @@
+INSERT INTO stok (id_barang, jumlah, kondisi, tanggal, keterangan) VALUES 
+-- Kategori 1: Air Mineral (ID 1-8)
+(1, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Le Minerale
+(2, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- AQUA 600
+(3, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- AQUVIVA
+(4, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- SanQua
+(5, 96, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- SanQua Gelas
+(6, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- PRIMA 600
+(7, 24, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- PRIMA 1500
+(8, 20, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- AQUA Galon
+
+-- Kategori 2: Susu & Yogurt (ID 9-15)
+(9, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- UltraMilk FC
+(10, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Ultra Straw
+(11, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Ultra Coklat
+(12, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Ultra Caramel
+(13, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Ultra Taro
+(14, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Cimory UHT
+(15, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Cimory Yogurt
+
+-- Kategori 3: Teh Kemasan (ID 16-21)
+(16, 72, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Teh Pucuk
+(17, 72, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Teh Kotak Melati
+(18, 72, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Teh Kotak Rasa
+(19, 72, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Teh Botol Kotak
+(20, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- TEBS
+(21, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Frutea
+
+-- Kategori 4: Kopi Siap Minum (ID 22-24)
+(22, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Good Day
+(23, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Golda
+(24, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Tora Cafe
+
+-- Kategori 5: Minuman Buah (ID 25-27)
+(25, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Isoplus
+(26, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Floridina
+(27, 48, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Minute Maid
+
+-- Kategori 6: Es Krim Stick (ID 28-31)
+(28, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), 
+(29, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(30, 30, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(31, 30, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+
+-- Kategori 7: Es Krim Cup (ID 32-35)
+(32, 30, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(33, 30, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(34, 40, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(35, 30, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+
+-- Kategori 8: Mie Instan (ID 36-39)
+(36, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Spix
+(37, 60, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Sedap Cup
+(38, 60, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(39, 60, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+
+-- Kategori 9: Snack Gurih (ID 40-45)
+(40, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(41, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(42, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(43, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(44, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(45, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Suki
+
+-- Kategori 10: Wafer & Cokelat (ID 46-51)
+(46, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(47, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(48, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(49, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(50, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(51, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+
+-- Kategori 11: Biskuit (ID 52-57)
+(52, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(53, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(54, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(55, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(56, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+(57, 50, 'Baik', CURRENT_DATE, 'Stok Awal Toko'),
+
+-- Kategori 12: Permen (ID 58-60)
+(58, 200, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Kiss
+(59, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'), -- Milkita
+(60, 100, 'Baik', CURRENT_DATE, 'Stok Awal Toko'); -- Frutyjelly

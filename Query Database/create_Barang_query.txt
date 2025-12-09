@@ -1,0 +1,84 @@
+INSERT INTO barang (id_kategori, nama_barang, harga, satuan, gambar) VALUES 
+-- Kategori 1: Air Mineral
+(1, 'Le Minerale Tanggung 600ml', 3000, 'Botol', NULL),
+(1, 'AQUA 600 ml', 3000, 'Botol', NULL),
+(1, 'AQUVIVA 700 ml', 2500, 'Botol', NULL),
+(1, 'SanQua Mineral 600 ml', 2000, 'Botol', NULL),
+(1, 'SanQua Mineral Gelas 220 ml', 500, 'Gelas', NULL),
+(1, 'Air Mineral PRIMA 600 ml', 2500, 'Botol', NULL),
+(1, 'Air Mineral PRIMA 1500 ml', 5000, 'Botol', NULL),
+(1, 'AQUA GALON 19 liter', 20000, 'Galon', NULL),
+
+-- Kategori 2: Susu & Yogurt
+(2, 'UltraMilk FC 200 ml', 5500, 'Pcs', NULL),
+(2, 'UltraMilk Strawberry 200 ml', 5500, 'Pcs', NULL),
+(2, 'UltraMilk Coklat 200 ml', 5500, 'Pcs', NULL),
+(2, 'UltraMilk Caramel 200 ml', 5500, 'Pcs', NULL),
+(2, 'UltraMilk Taro 200 ml', 5500, 'Pcs', NULL),
+(2, 'Cimory UHT 250 ml (All Variant)', 6500, 'Pcs', NULL),
+(2, 'Cimory Yogurt Drink 250 ml', 6500, 'Botol', NULL),
+
+-- Kategori 3: Teh Kemasan
+(3, 'Teh Pucuk 350 ml', 3500, 'Botol', NULL),
+(3, 'Teh Kotak Melati 300 ml', 4000, 'Pcs', NULL),
+(3, 'Teh Kotak Rasa (Leci/Lemon/Apel) 300 ml', 4000, 'Pcs', NULL),
+(3, 'Teh Botol Kotak 200 ml', 3000, 'Pcs', NULL),
+(3, 'TEBS 350 ml K-12', 4000, 'Botol', NULL),
+(3, 'Frutea Apel/BW 350 ml', 4500, 'Botol', NULL),
+
+-- Kategori 4: Kopi Siap Minum
+(4, 'Good Day Botol 250 ml', 6000, 'Botol', NULL),
+(4, 'Golda Capucino 200 ml', 6000, 'Botol', NULL),
+(4, 'Tora Café 180 ml', 4000, 'Botol', NULL),
+
+-- Kategori 5: Minuman Buah & Isotonik
+(5, 'Isoplus Coco 350 ml', 3000, 'Botol', NULL),
+(5, 'Floridina Coco 350 ml', 3500, 'Botol', NULL),
+(5, 'Minute Maid M.Boost 300 ml', 7000, 'Botol', NULL),
+
+-- Kategori 6: Es Krim Stick & Cone
+(6, 'Waku-waku Nanas/Dino', 2500, 'Pcs', NULL),
+(6, 'Waku-waku Ice Loly Manggo', 2500, 'Pcs', NULL),
+(6, 'J-Cone Black & Pink', 5000, 'Pcs', NULL),
+(6, 'Haku Double Choco', 5000, 'Pcs', NULL),
+
+-- Kategori 7: Es Krim Cup & Mochi
+(7, 'Frostbite Crunchy Double Choco', 5000, 'Pcs', NULL),
+(7, 'Frostbite Bobba Milk Tea', 5000, 'Pcs', NULL),
+(7, 'Frostbite Mochi (All Variant)', 3000, 'Pcs', NULL),
+(7, 'Frostbite Cup Strawberry/Vanila', 5000, 'Pcs', NULL),
+
+-- Kategori 8: Mie Instan
+(8, 'Spix Mie Goreng', 500, 'Pcs', NULL),
+(8, 'Sedap Mie Cup Baso Bleduk 77 gr', 7000, 'Cup', NULL),
+(8, 'Mie Sedap Cup Goreng 77 gr', 7000, 'Cup', NULL),
+(8, 'Mie Sedap Cup Korean Spicy', 7000, 'Cup', NULL),
+
+-- Kategori 9: Keripik & Snack Gurih
+(9, 'Pilus Mantul', 2000, 'Pcs', NULL),
+(9, 'Garuda Rosta Bawang 250 gr', 2000, 'Pcs', NULL),
+(9, 'Q-tela Barbeq 23 gr', 2000, 'Pcs', NULL),
+(9, 'Happytos Tortila 25 gr', 2000, 'Pcs', NULL),
+(9, 'Ritz Cracker 27 gr', 2000, 'Pcs', NULL),
+(9, 'Suki 18 gr', 500, 'Pcs', NULL),
+
+-- Kategori 10: Wafer & Cokelat
+(10, 'Chocolatos Grande', 2000, 'Pcs', NULL),
+(10, 'Dilan Crunch Cho', 2000, 'Pcs', NULL),
+(10, 'Blaztos Choc 24 g', 2000, 'Pcs', NULL),
+(10, 'Beng-beng Kalpa 24 g', 2000, 'Pcs', NULL),
+(10, 'Tanggo Waffle Mocha 25 g', 2000, 'Pcs', NULL),
+(10, 'Apollo Stik Wafer', 1000, 'Pcs', NULL),
+
+-- Kategori 11: Biskuit & Sponge
+(11, 'Goodtime Mini Double Cho', 2000, 'Pcs', NULL),
+(11, 'Roma Arden Cookies', 2000, 'Pcs', NULL),
+(11, 'Oishi Sponge (Straw/Cho) 22 g', 2000, 'Pcs', NULL),
+(11, 'Oishi Popcorn (Mentega/Caramel/Coklat)', 2000, 'Pcs', NULL),
+(11, 'Oreo Van 27.9 gr', 2000, 'Pcs', NULL),
+(11, 'Nissin Wallens Cho 15 g', 2000, 'Pcs', NULL),
+
+-- Kategori 12: Permen & Jelly
+(12, 'Permen Kiss (Mint/Cherry/Apel)', 250, 'Pcs', NULL),
+(12, 'Milkita Lolipop', 1000, 'Pcs', NULL),
+(12, 'Frutyjelly 20 g', 1000, 'Pcs', NULL);

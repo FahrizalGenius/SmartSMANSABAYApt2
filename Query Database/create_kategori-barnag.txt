@@ -1,0 +1,13 @@
+INSERT INTO kategori_barang (nama_kategori, deskripsi) VALUES 
+('Air Mineral', 'Air minum murni dalam kemasan botol, gelas, dan galon'),
+('Susu & Yogurt', 'Susu UHT cair dan minuman yogurt aneka rasa'),
+('Teh Kemasan', 'Minuman teh siap minum dalam kemasan botol atau kotak'),
+('Kopi Siap Minum', 'Minuman kopi instan siap konsumsi dalam kemasan'),
+('Minuman Buah & Isotonik', 'Minuman dengan perisa buah-buahan dan air isotonik'),
+('Es Krim Stick & Cone', 'Produk es krim beku dengan model stick dan cone'),
+('Es Krim Cup & Mochi', 'Produk es krim dalam wadah cup dan varian mochi ice cream'),
+('Mie Instan', 'Mie instan dalam kemasan cup dan camilan mie kering'),
+('Keripik & Snack Gurih', 'Berbagai camilan rasa asin, aneka keripik, dan kacang-kacangan'),
+('Wafer & Cokelat', 'Camilan wafer berlapis krim dan cokelat bar'),
+('Biskuit & Sponge', 'Biskuit manis, kue kering (cookies), dan camilan sponge renyah'),
+('Permen & Jelly', 'Berbagai jenis kembang gula (permen) dan jelly');
